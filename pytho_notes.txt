@@ -1,0 +1,2376 @@
+DAY-1
+PythonIndentations
+Whereinotherprogramminglanguagestheindentationincodeisforreadabilityonly,in
+Pythontheindentationisveryimportant.
+Pythonusesindentationtoindicateablockofcode.
+if5>2:
+print("Fiveisgreaterthantwo!")
+Output:
+Fiveisgreaterthantwo!
+Pythonwillgiveyouanerrorifyouskiptheindentation:
+if5>2:
+print("Fiveisgreaterthantwo!")
+Output:
+Error
+Comments
+Pythonhascommentingcapabilityforthepurposeofin-codedocumentation.
+Commentsstartwitha#,andPythonwillrendertherestofthelineasacomment:
+#Thisisacomment.
+print("Hello,World!")
+Docstrings
+Pythonalsohasextendeddocumentationcapability,calleddocstrings.
+Docstringscanbeoneline,ormultiline.
+Pythonusestriplequotesatthebeginningandendofthedocstring:
+"""Thisisa
+multilinedocstring."""
+print("Hello,World!")
+Python Variables
+ Unlikeotherprogramminglanguages,Pythonhasnocommandfordeclaringa
+variable.
+ Avariableiscreatedthemomentyoufirstassignavaluetoit.
+x=5
+y="John"
+print(x)
+print(y)
+Output:
+5
+John
+ Variablesdonotneedtobedeclaredwithanyparticulartypeandcaneven
+changetypeaftertheyhavebeenset.
+x=4
+x="Sally"
+print(x)
+output:
+Sally
+VariableNames
+Avariablecanhaveashortname(likexandy)oramoredescriptivename(age,
+carname,total_volume).RulesforPythonvariables:
+ Avariablenamemuststartwithaletterortheunderscorecharacter
+ Avariablenamecannotstartwithanumber
+ Avariablenamecanonlycontainalpha-numericcharactersandunderscores(A-z,
+0-9,and_)
+ Variablenamesarecase-sensitive(age,AgeandAGEarethreedifferent
+variables)
+Tocombinebothtextandavariable,Pythonusesthe+character:
+x="awesome"
+print("Pythonis"+x)
+Output:
+Phythonisawesome
+Fornumbers,the+characterworksasamathematicaloperator:
+x=5
+y=10
+print(x+y)
+Ifyoutrytocombineastringandanumber,Pythonwillgiveyouanerror:
+x=5
+y="John"
+print(x+y)
+TypeError:unsupportedoperandtype(s)for+:'int'and'str'
+ToverifythetypeofanyobjectinPython,usethetype()function:
+x=1
+y=2.8
+print(type(x))
+print(type(y))
+Output:
+<class'int'>
+<class'float'>
+Python Casting
+Castinginpythonisthereforedoneusingconstructorfunctions:
+ int()-constructsanintegernumberfromanintegerliteral,afloatliteral(by
+roundingdowntothepreviouswholenumber),orastringliteral(providingthe
+stringrepresentsawholenumber)
+ float()-constructsafloatnumberfromanintegerliteral,afloatliteralorastring
+literal(providingthestringrepresentsafloatoraninteger)
+ str()-constructsastringfromawidevarietyofdatatypes,includingstrings,
+integerliteralsandfloatliterals
+x=int(1)
+y=int(2.8)
+z=int("3")
+print(x)
+print(y)
+print(z)
+Output:
+1
+2
+3
+x=str("s1")
+y=str(2)
+z=str(3.0)
+print(x)
+print(y)
+print(z)
+Output
+s1
+2
+3.0
+PythonOperators
+Operatorsareusedtoperformoperationsonvariablesandvalues.
+Pythondividestheoperatorsinthefollowinggroups:
+ Arithmeticoperators
+ Assignmentoperators
+ Comparisonoperators
+ Logicaloperators
+ Identityoperators
+ Membershipoperators
+ Bitwiseoperators
+ArithmeticOperators
+Operator Name Example Tryit
++ Addition x+y Tryit»
+- Subtraction x-y Tryit»
+* Multiplication x*y Tryit»
+/ Division x/y Tryit»
+% Modulus x%y Tryit»
+** Exponentiation x**y
+// Floordivision x//y
+AssignmentOperators
+Assignmentoperatorsareusedtoassignvaluestovariables:
+Operator Example SameAs Tryit
+= x=5 x=5 Tryit»
++= x+=3 x=x+3 Tryit»
+-= x-=3 x=x-3 Tryit»
+*= x*=3 x=x*3 Tryit»
+/= x/=3 x=x/3 Tryit»
+%= x%=3 x=x%3 Tryit»
+//= x//=3 x=x//3 Tryit»
+**= x**=3 x=x**3
+ComparisonOperators
+Comparisonoperatorsareusedtocomparetwovalues:
+Operator Name Example Tryit
+== Equal x==y Tryit»
+!= Notequal x!=y Tryit»
+> Greaterthan x>y Tryit»
+< Lessthan x<y Tryit»
+>= Greaterthanorequalto x>=y Tryit»
+<= Lessthanorequalto x<=y
+LogicalOperators
+Logicaloperatorsareusedtocombineconditionalstatements:
+Operator Description Example Tryit
+and ReturnsTrueifbothstatementsaretrue x<5andx<10 Tryit»
+Or ReturnsTrueifoneofthestatementsistrue x<5orx<4 Tryit»
+Not Reversetheresult,returnsFalseiftheresultistrue not(x<5andx<10)
+IdentityOperators
+Identityoperatorsareusedtocomparetheobjects
+x=["apple","banana"]
+y=["apple","banana"]
+z=x
+print(xisz)
+#returnsTruebecausezisthesameobjectasx
+print(xisy)
+#returnsFalsebecausexisnotthesameobjectasy,eveniftheyhavethesame
+content
+print(x==y)
+True
+False
+True
+MembershipOperators
+Membershipoperatorsareusedtotestifasequenceispresentedinanobject:
+Operator Description Example Tryit
+in ReturnsTrueifasequencewiththe
+specifiedvalueispresentintheobject
+xiny Tryit»
+notin ReturnsTrueifasequencewiththe
+specifiedvalueisnotpresentintheobject
+xnotiny
+1)
+x=["apple","banana"]
+print("banana"inx)
+Output:
+True
+2)
+x=["apple","banana"]
+print("pineapple"notinx)
+Output:
+True
+BitwiseOperators
+Bitwiseoperatorsareusedtocompare(binary)numbers:
+Operator Name Description
+& AND Setseachbitto1ifbothbitsare1
+| OR Setseachbitto1ifoneoftwobitsis1
+^ XOR Setseachbitto1ifonlyoneoftwobitsis1
+~ NOT Invertsallthebits
+<< Zerofillleftshift Shiftleftbypushingzerosinfromtherightandlettheleftmostbitsfalloff
+>> Signedrightshift Shiftrightbypushingcopiesoftheleftmostbitinfromtheleft,andlettherightmost
+bitsfalloff
+ConditionsandIfstatements
+An"ifstatement"iswrittenbyusingtheifkeyword.
+a=33
+b=200
+ifb>a:
+print("bisgreaterthana")
+Pythonreliesonindentation,usingwhitespace,todefinescopeinthecode.Other
+programminglanguagesoftenusecurly-bracketsforthispurpose.
+a=33
+b=200
+ifb>a:
+print("bisgreaterthana")
+Output
+File"demo_if_error.py",line4
+print("bisgreaterthana")
+^
+IndentationError:expectedanindentedblock
+Elif
+Theelifkeywordispythonswayofsaying"ifthepreviousconditionswerenottrue,then
+trythiscondition".
+a=33
+b=33
+ifb>a:
+print("bisgreaterthana")
+elifa==b:
+print("aandbareequal")
+Output
+aandbareequal
+Else
+Theelsekeywordcatchesanythingwhichisn'tcaughtbytheprecedingconditions.
+a=200
+b=33
+ifb>a:
+print("bisgreaterthana")
+elifa==b:
+print("aandbareequal")
+else:
+print("aisgreaterthanb")
+Output
+aisgreaterthanb
+ShortHandIf...Else
+Ifyouhaveonlyonestatementtoexecute,oneforif,andoneforelse,youcanputitall
+onthesameline:
+a=30
+b=20
+print("A")ifb>aelseprint("B")
+And
+Theandkeywordisalogicaloperator,andisusedtocombineconditionalstatements:
+a=200
+b=33
+c=500
+ifa>bandc>a:
+print("BothconditionsareTrue")
+Output
+BothconditionsareTrue
+Or
+Theorkeywordisalogicaloperator,andisusedtocombineconditionalstatements:
+a=200
+b=33
+c=500
+ifa>bora>c:
+print("AtleastoneoftheconditionsisTrue")
+Output
+AtleastoneoftheconditionsisTrue
+PythonLoops
+Pythonhastwoprimitiveloopcommands:
+ whileloops
+ forloops
+ThewhileLoop
+Withthewhileloopwecanexecuteasetofstatementsaslongasaconditionistrue.
+i=1
+whilei<6:
+print(i,end="")
+i+=1
+Output
+12345
+ThebreakStatement
+Withthebreakstatementwecanstoptheloopevenifthewhileconditionistrue:
+i=1
+whilei<6:
+print(i)
+if(i==3):
+break
+i+=1
+Output
+1
+2
+3
+ThecontinueStatement
+Withthecontinuestatementwecanstopthecurrentiteration,andcontinuewiththe
+next:
+i=0
+whilei<6:
+i+=1
+ifi==3:
+continue
+print(i)
+Output
+1
+2
+4
+5
+6
+ForLoops
+Aforloopisusedforiteratingoverasequence(thatiseitheralist,atuple,adictionary,
+aset,orastring).
+fruits=["apple","banana","cherry"]
+forxinfruits:
+print(x)
+Output
+apple
+banana
+cherry
+Therange()Function
+ Toloopthroughasetofcodeaspecifiednumberoftimes,wecanuse
+therange()function.
+ Therange()functionreturnsasequenceofnumbers,startingfrom0bydefault,
+andincrementsby1(bydefault),andendsataspecifiednumber.
+forxinrange(6):
+print(x)
+Output
+0
+1
+2
+3
+4
+5
+Therange()functiondefaultsto0asastartingvalue,howeveritispossibletospecify
+thestartingvaluebyaddingaparameter:range(2,6),whichmeansvaluesfrom2to6
+(butnotincluding6):
+forxinrange(2,6):
+print(x)
+output
+2
+3
+4
+5
+Therange()functiondefaultstoincrementthesequenceby1,howeveritispossibleto
+specifytheincrementvaluebyaddingathirdparameter:range(2,30,3):
+forxinrange(2,30,3):
+print(x)
+Output
+2
+5
+8
+11
+14
+17
+20
+23
+26
+29
+ElseinForLoop
+Theelsekeywordinaforloopspecifiesablockofcodetobeexecutedwhentheloopis
+finished:
+forxinrange(6):
+print(x)
+else:
+print("Finallyfinished!")
+Output
+0
+1
+2
+3
+4
+5
+Finallyfinished!
+NestedLoops
+Anestedloopisaloopinsidealoop.
+adj=["red","big","tasty"]
+fruits=["apple","banana","cherry"]
+forxinadj:
+foryinfruits:
+print(x,y)
+Output
+redapple
+redbanana
+redcherry
+bigapple
+bigbanana
+bigcherry
+tastyapple
+tastybanana
+tastycherry
+Inputfunction
+print("Enteryourname:")
+x=input()
+print("Hello,"+x)
+x=input('Enteryourname:')
+print('Hello,'+x)
+DAY-2
+Collections
+TherearefourcollectiondatatypesinthePythonprogramminglanguage:
+ Listisacollectionwhichisorderedandchangeable.Allowsduplicatemembers.
+ Tupleisacollectionwhichisorderedandunchangeable.Allowsduplicate
+members.
+ Setisacollectionwhichisunorderedandunindexed.Noduplicatemembers.
+ Dictionaryisacollectionwhichisunordered,changeableandindexed.No
+duplicatemembers.
+List
+ Alistisacollectionwhichisorderedandchangeable.InPythonlistsarewritten
+withsquarebrackets.
+thislist=["apple","banana","cherry"]
+print(thislist)
+Output
+['apple','banana','cherry']
+AccessItems
+Youaccessthelistitemsbyreferringtotheindexnumber:
+thislist=["apple","banana","cherry"]
+print(thislist[1])
+Output
+Banana
+ChangeItemValue
+Tochangethevalueofaspecificitem,refertotheindexnumber:
+thislist=["apple","banana","cherry"]
+thislist[1]="blackcurrant"
+print(thislist)
+Output
+['apple','blackcurrant','cherry']
+Youcanloopthroughthelistitemsbyusingaforloop:
+thislist=["apple","banana","cherry"]
+forxinthislist:
+print(x)
+Output
+apple
+banana
+cherry
+CheckifItemExists
+Todetermineifaspecifieditemispresentinalistusetheinkeyword:
+thislist=["apple","banana","cherry"]
+if"apple"inthislist:
+print("Yes,'apple'isinthefruitslist")
+Output
+Yes,'apple'isinthefruitslist
+ListLength
+Todeterminehowmanyitemsalisthas,usethelen()method:
+thislist=["apple","banana","cherry"]
+print(len(thislist)) Output3
+AddItems
+Toaddanitemtotheendofthelist,usetheappend()method:
+thislist=["apple","banana","cherry"]
+thislist.append("orange")
+print(thislist)
+Output
+['apple','banana','cherry','orange']
+Toaddanitematthespecifiedindex,usetheinsert()method:
+thislist=["apple","banana","cherry"]
+thislist.insert(1,"orange")
+print(thislist)
+RemoveItem
+Thereareseveralmethodstoremoveitemsfromalist:
+thislist=["apple","banana","cherry"]
+thislist.remove("banana")
+print(thislist)
+Output
+['apple','cherry']
+Thepop()methodremovesthespecifiedindex,(orthelastitemifindexisnotspecified):
+thislist=["apple","banana","cherry"]
+thislist.pop()
+print(thislist)
+Output
+['apple','banana']
+Thedelkeywordremovesthespecifiedindex:
+thislist=["apple","banana","cherry"]
+delthislist[0]
+print(thislist)
+Output
+['banana','cherry']
+Thedelkeywordcanalsodeletethelistcompletely:
+thislist=["apple","banana","cherry"]
+delthislist
+print(thislist)#thiswillcauseanerrorbecauseyouhavesuccsesfullydeleted"thislist".
+Theclear()methodemptiesthelist:
+thislist=["apple","banana","cherry"]
+thislist.clear()
+print(thislist)
+Output
+[]
+CopyaList
+Youcannotcopyalistsimplybytypinglist2=list1,because:list2willonlybe
+areferencetolist1,andchangesmadeinlist1willautomaticallyalsobemadeinlist2.
+Therearewaystomakeacopy,onewayistousethebuilt-inListmethodcopy().
+thislist=["apple","banana","cherry"]
+mylist=thislist.copy()
+print(mylist)
+Output
+['apple','banana','cherry']
+Anotherwaytomakeacopyistousethebuilt-inmethodlist().
+thislist=["apple","banana","cherry"]
+mylist=list(thislist)
+print(mylist)
+Output
+['apple','banana','cherry']
+ListMethods
+Pythonhasasetofbuilt-inmethodsthatyoucanuseonlists.
+count() Method
+Returnthenumberoftimesthevalue"cherry"appearsintthefruitslist:
+fruits=["apple","banana","cherry"]
+x=fruits.count("cherry")
+print(x)
+List extend() Method
+Addtheelementsofcarstothefruitslist:
+fruits=['apple','banana','cherry']
+cars=['Ford','BMW','Volvo']
+fruits.extend(cars)
+print(fruits)
+Output
+['apple','banana','cherry','Ford','BMW','Volvo']
+List reverse() Method
+Reversetheorderofthefruitlist:
+fruits=['apple','banana','cherry']
+fruits.reverse()
+print(fruits)
+Output:
+['cherry','banana','apple']
+List sort() Method
+Sortthelistalphabetically:
+cars=['Ford','BMW','Volvo']
+cars.sort()
+print(cars)
+Output
+['BMW','Ford','Volvo']
+max()
+Themethodmaxreturnstheelementsfromthelistwithmaximumvalue.
+list1,list2=[‘xyz','zara','abc'],[456,700,200]
+print("Maxvalueelement:",max(list1))
+print("Maxvalueelement:",max(list2))
+min()
+list1,list2=['xyz','zara','abc'],[456,700,200]
+print("Maxvalueelement:",min(list1))
+print("Maxvalueelement:",min(list2))
+Tuple
+Atupleisacollectionwhichisorderedandunchangeable.InPythontuplesarewritten
+withroundbrackets.
+CreateaTuple:
+thistuple=("apple","banana","cherry")
+print(thistuple)
+Output
+('apple','banana','cherry')
+AccessTupleItems
+Youcanaccesstupleitemsbyreferringtotheindexnumber,insidesquarebrackets:
+Returntheiteminposition1:
+thistuple=("apple","banana","cherry")
+print(thistuple[1])
+Output
+Banana
+LoopThroughaTuple
+Youcanloopthroughthetupleitemsbyusingaforloop.
+thistuple=("apple","banana","cherry")
+forxinthistuple:
+print(x)
+Output
+apple
+banana
+cherry
+CheckifItemExists
+Todetermineifaspecifieditemispresentinatupleusetheinkeyword:
+Checkif"apple"ispresentinthetuple:
+thistuple=("apple","banana","cherry")
+if"apple"inthistuple:
+print("Yes,'apple'isinthefruitstuple")
+Output
+Yes,'apple'isinthefruitstuple
+TupleLength
+Todeterminehowmanyitemsatuplehas,usethelen()method:
+thistuple=("apple","banana","cherry")
+print(len(thistuple))
+Output
+3
+RemoveItems
+Note:Youcannotremoveitemsinatuple.
+Tuplesareunchangeable,soyoucannotremoveitemsfromit,butyoucandeletethe
+tuplecompletely:
+thistuple=("apple","banana","cherry")
+delthistuple
+print(thistuple)#thiswillraiseanerrorbecausethetuplenolongerexists
+TupleMethods
+thistuple=(1,3,7,8,7,5,4,6,8,5)
+x=thistuple.count(5)
+print(x)
+Output
+2
+Tuple index() Method
+thistuple=(1,3,7,8,7,5,4,6,8,5)
+x=thistuple.index(8)
+print(x)
+Output
+3
+Slice()
+Createatupleandasliceobject.Printfirst2positionselements
+a=("a","b","c","d","e","f","g","h")
+x=slice(2)
+print(a[x])
+Createatupleandasliceobject.Startthesliceobjectatposition3,andslicetoposition5
+#a=("a","b","c","d","e","f","g","h")
+#x=slice(3,5)
+#print(a[x])
+Createatupleandasliceobject.Usethestepparametertoreturneverythirditem:
+a=("a","b","c","d","e","f","g","h")
+x=slice(0,8,3)
+print(a[x])
+Set
+Asetisacollectionwhichisunorderedandunindexed.InPythonsetsarewrittenwith
+curlybrackets.
+CreateaSet:
+thisset={"apple","banana","cherry"}
+print(thisset)
+AccessItems
+Youcannotaccessitemsinasetbyreferringtoanindex,sincesetsareunorderedthe
+itemshasnoindex.
+Butyoucanloopthroughthesetitemsusingaforloop,oraskifaspecifiedvalueis
+presentinaset,byusingtheinkeyword.
+thisset={"apple","banana","cherry"}
+forxinthisset:
+print(x)
+Checkif"banana"ispresentintheset:
+thisset={"apple","banana","cherry"}
+print("banana"inthisset)
+output
+True
+thisset={"apple","banana","orange"}
+if"banana"inthisset:
+print("yes")
+output
+yes
+ChangeItems
+Onceasetiscreated,youcannotchangeitsitems,butyoucanaddnewitems.
+AddItems
+Toaddoneitemtoasetusetheadd()method.
+Toaddmorethanoneitemtoasetusetheupdate()method.
+Add()
+thisset={"apple","banana","cherry"}
+thisset.add("orange")
+print(thisset)
+{'orange','cherry','banana','apple'}
+Addmultipleitemstoaset,usingtheupdate()method:
+thisset={"apple","banana","cherry"}
+thisset.update(["orange","mango","grapes"])
+print(thisset)
+Output
+{'cherry','mango','banana','grapes','orange','apple'}
+GettheLengthofaSet
+Todeterminehowmanyitemsasethas,usethelen()method.
+thisset={"apple","banana","cherry"}
+print(len(thisset))
+Output
+3
+RemoveItem
+Toremoveaniteminaset,usetheremove(),orthediscard()method.
+thisset={"apple","banana","cherry"}
+thisset.remove("banana")
+print(thisset)
+{'apple','cherry'}
+thisset={"apple","banana","cherry"}
+thisset.discard("a")
+print(thisset)
+Output
+{"apple","banana","cherry"}
+Note:Iftheitemtoremovedoesnotexist,discard()willNOTraiseanerror.
+Youcanalsousethepop(),methodtoremoveanitem,butthismethodwillremove
+thelastitem.Rememberthatsetsareunordered,soyouwillnotknowwhatitemthat
+getsremoved.
+Thereturnvalueofthepop()methodistheremoveditem.
+The clear() methodemptiestheset:
+thisset={"apple","banana","cherry"}
+thisset.clear()
+print(thisset)
+Output
+set()
+The del keywordwilldeletethesetcompletely:
+thisset={"apple","banana","cherry"}
+delthisset
+print(thisset)#thiswillraiseanerrorbecausethesetnolongerexists
+Theset()Constructor
+Itisalsopossibletousetheset()constructortomakeaset.
+thisset=set(("apple","banana","cherry"))
+print(thisset)
+{'apple','banana','cherry'}
+add() Method
+Theadd()methodaddsanelementtotheset.
+thisset={"apple","banana","cherry"}
+thisset.add("orange")
+print(thisset)
+{'apple','banana','orange','cherry'}
+Dictionary
+Adictionaryisacollectionwhichisunordered,changeableandindexed.InPython
+dictionariesarewrittenwithcurlybrackets,andtheyhavekeysandvalues.
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+print(thisdict)
+{'brand':'Ford','model':'Mustang','year':1964}
+AccessingItems
+Youcanaccesstheitemsofadictionarybyreferringtoitskeyname,insidesquare
+brackets:
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+x=thisdict["model"]
+print(x)
+Mustang
+Thereisalsoamethodcalledget()thatwillgiveyouthesameresult:
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+x=thisdict.get("model")
+print(x)
+Mustang
+ChangeValues
+Youcanchangethevalueofaspecificitembyreferringtoitskeyname:
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+thisdict["year"]=2018
+print(thisdict)
+{'brand':'Ford','model':'Mustang','year':2018}
+LoopThroughaDictionary
+Youcanloopthroughadictionarybyusingaforloop.
+Whenloopingthroughadictionary,thereturnvaluearethekeysofthedictionary,butthere
+aremethodstoreturnthevaluesaswell.
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+forxinthisdict:
+print(x)
+brand
+model
+year
+Loopthroughbothkeysandvalues,byusingtheitems()function:
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+forx,yinthisdict.items():
+print(x,y)
+brandFord
+modelMustang
+year1964
+CheckifKeyExists
+Todetermineifaspecifiedkeyispresentinadictionaryusetheinkeyword:
+Checkif"model"ispresentinthedictionary:
+thisdict={
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+if"model"inthisdict:
+print("Yes,'model'isoneofthekeysinthethisdictdictionary")
+Yes,'model'isoneofthekeysinthethisdictdictionary
+DictionaryLength
+Todeterminehowmanyitems(key-valuepairs)adictionaryhas,usethelen()method.
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+print(len(thisdict))
+3
+AddingItems
+Addinganitemtothedictionaryisdonebyusinganewindexkeyandassigningavalue
+toit:
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+thisdict["color"]="red"
+print(thisdict)
+{'brand':'Ford','model':'Mustang','year':1964,'color':'red'}
+RemovingItems
+Thereareseveralmethodstoremoveitemsfromadictionary:
+Thepop()methodremovestheitemwiththespecifiedkeyname:
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+thisdict.pop("model")
+print(thisdict)
+{'brand':'Ford','year':1964}
+Thepopitem()methodremovesthelastinserteditem(inversionsbefore3.7,arandom
+itemisremovedinstead):
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+thisdict.popitem()
+print(thisdict)
+{'brand':'Ford','model':'Mustang'}
+Thedelkeywordcanalsodeletethedictionarycompletely:
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+delthisdict
+print(thisdict)#thiswillcauseanerrorbecause"thislist"nolongerexists.
+Theclear()keywordemptiesthedictionary:
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+thisdict.clear()
+print(thisdict)
+{}
+CopyaDictionary
+Youcannotcopyadictionarysimplybytypingdict2=dict1,because:dict2willonlybe
+areferencetodict1,andchangesmadeindict1willautomaticallyalsobemadeindict2.
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+mydict=thisdict
+mydict["color"]="red"
+print(thisdict)
+print(mydict)
+{'year':1964,'brand':'Ford','color':'red','model':'Mustang'}
+{'year':1964,'brand':'Ford','color':'red','model':'Mustang'}
+Therearewaystomakeacopy,onewayistousethebuilt-inDictionarymethodcopy().
+thisdict= {
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+mydict=thisdict.copy()
+mydict["color"]="red"
+print(thisdict)
+print(mydict)
+{'year':1964,'brand':'Ford','model':'Mustang'}
+{'color':'red','year':1964,'brand':'Ford','model':'Mustang'}
+Anotherwaytomakeacopyistousethebuilt-inmethoddict().
+thisdict={
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+mydict=dict(thisdict)
+print(mydict)
+{'brand':'Ford','model':'Mustang','year':1964}
+Thedict()Constructor
+Itisalsopossibletousethedict()constructortomakeanewdictionary:
+thisdict=dict(brand="Ford",model="Mustang",year=1964)
+print(thisdict)
+{'brand':'Ford','model':'Mustang','year':1964}
+Thefromkeys()methodreturnsadictionarywiththespecifiedkeysandvalues.
+x=('key1','key2','key3')
+y=0
+thisdict=dict.fromkeys(x,y)
+print(thisdict)
+{'key3':0,'key1':0,'key2':0}
+Thesetdefault()methodreturnsthevalueoftheitemwiththespecifiedkey.
+car={
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+x=car.setdefault("model","Bronco")
+print(x)
+Mustang
+Getthevalueofthe"color"item,ifthe"color"itemdoesnotexist,insert"color"withthe
+value"white":
+car={
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+x=car.setdefault("color","White")
+print(x)
+print(car)
+White
+{'model':'Mustang','color':'White','year':1964,'brand':'Ford'}
+ Theupdate()methodinsertsthespecifieditemstothedictionary.
+ Thespecifieditemscanbeadictionary,oraniterableobject.
+car={
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+car.update({"color":"White"})
+print(car)
+{'brand':'Ford','model':'Mustang','year':1964,'color':'White'}
+Thevalues()methodreturnsaviewobject.Theviewobjectcontainsthevaluesofthe
+dictionary,asalist.
+car={
+"brand":"Ford",
+"model":"Mustang",
+"year":1964
+}
+x=car.values()
+print(x)
+dict_values(['Ford','Mustang',1964])
+DAY-3
+String(s)literalsinpythonaresurroundedbyeithersinglequotationmarks,ordouble
+quotationmarks.
+'hello'isthesameas"hello".
+Stringscanbeoutputtoscreenusingtheprintfunction.Forexample:print("hello").
+Likemanyotherpopularprogramminglanguages,stringsinPythonarearraysofbytes.
+However,Pythondoesnothaveacharacterdatatype,asinglecharacterissimplya
+stringwithalengthof1.Squarebracketscanbeusedtoaccesselementsofthestring.
+Getthecharacteratposition1(rememberthatthefirstcharacterhastheposition0):
+a="Hello,World!"
+print(a[1])
+Substring.Getthecharactersfromposition2toposition5(notincluded):
+b="Hello,World!"
+print(b[2:5])
+EX:-
+0 1 2 3 4 5 6 7 8 9 10 11
+H E L L O W O R L D !
+-12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1
+s="HelloWorld!"
+print("s[4]=",s[4])
+print("s[6:11]=",s[6:11])
+print("s[2:]=",s[2:])
+print("s[:4]=",s[:4])
+print("s[-1]=",s[-1])
+print("s[-8:-1]=",s[-8:-1])
+print("s[-2:]=",s[-2:])
+print("s[:-1]=",s[:-1])
+Thestrip()methodremovesanywhitespacefromthebeginningortheend:
+a="Hello,World!"
+print(a.strip())
+Hello,World!
+a="Hello,World!"
+print(len(a))
+13
+Thelower()methodreturnsthestringinlowercase:
+a="Hello,World!"
+print(a.lower())
+hello,world!
+Thereplace()methodreplacesastringwithanotherstring:
+a="Hello,World!"
+print(a.replace("H","J"))
+Jello,World!
+Thesplit()methodsplitsthestringintosubstringsifitfindsinstancesoftheseparator:
+a="Hello,World!"
+print(a.split(","))
+['Hello','World!']
+Thefollowingexampleasksfortheuser'sname,then,byusingthe input() method,the
+programprintsthenametothescreen:
+print("Enteryourname:")
+x=input()
+print("Hello,",x)
+OperatorswithString
+ Theplusoperator(+)whichactsasconcatenationoperator.
+Ex:
+print("Enteryourname:")
+x=input()
+print("Hello,"+x)
+ Theasterisk(*)actsasrepetitiveoperator.
+Ex:
+print("Enteryourname:")
+x=input()
+print("Hello,"+x*2)
+StringModification
+Stringisimmutable.Somodificationisnotpossiblewithstrings
+s="QS"
+s[1]="I"
+print(s)
+StringFunctions
+Followingarethemostlyusedstringfunctions:
+1)len():-Itwillgivethelengthofthecorrespondingstringobject
+2)max():-returnsmaximumalphabeticalcharacterpresentinstringobject
+3)min():-returnsminimumalphabeticalcharacterpresentinstringobject
+4)str():-Itwillconvertcorrespondingobjecttostringobject.
+5)ord():-ItreturnsthecorrespondingASCIIcodeofthecharacter
+6)chr():-ItwillconverttheASCIIcodetoitscorrespondingcharacter
+7)complex(r,i):-givestherepresentationincomplexnumberformat.
+Ex:-
+s="Python"
+print(s)
+print(len(s))
+print(str(100.25))
+print(max(s))
+print(min(s))
+print(ord("A"))
+print(chr(97))
+print(complex(2,4))
+StringMethods
+Tocallthemethodswehavetomakeuseofstringobjectwithdotoperator
+1)s.capitalize():-Itwillcapitalizeeachwordinthestring.
+2)s.center(width,char):-Itwillplacethestringinthecenterandtherestofthe
+placeswillbepaddedwithgivencharactersfromthebeginningandfromend.
+3)s.count(sub):-Itwillcountthenumberoftimesubpresentinthemainstring
+4)s.find(str):-Searchesforstrinthestring.Itreturnstheindexifstrispresentin
+thestringotherwisereturns-1.
+5)s.index(str):-Searchesforstrinthestring.Itreturnstheindexifstrispresentin
+thestringotherwiserisestheexception.
+6)s.lower():-Itwillconvertalltheuppercasecharacterstolowercasecharacters.
+7)s.upper():-Itwillconvertallthelowercasecharacterstouppercasecharacters.
+EX:-
+s="helloworld"
+print(s)
+print(s.capitalize())
+print(s.center(15,"*"))
+print(s.count("h"))
+print(s.find("h"))
+print(s.index("h"))
+print(s.lower())
+print(s.upper())
+8)s.replace(oldstr,newstr):-replacestheoldstringwithnewstring
+9)s.split(delimiter):-splitsthestringandreturnslistofsubstrings.
+10)s.swapcase():-inverseallthecasesinthestring.
+11)s.join(sequence):-Itwilljointhestringsequencetothemainstring
+12)s.isalnum():-Itreturnstrueifstringhasatleastonecharacterandallthe
+charactersarealphanumericotherwisereturnsfalse
+13)s.isalpha():-Itreturnstrueifstringhasatleastonecharacterandallthe
+charactersarealphabeticotherwisereturnsfalse
+14)s.isdigit():-Itreturnstrueifstringhasonlydigitsotherwisereturnsfalse
+15)s.islower():-Itreturnstrueifstringhasatleastonecharacterandallthe
+charactersareinlowercaseotherwisereturnsfalse.
+16)s.isspace():-Itreturnstrueifstringhasallwhitespacesotherwisereturnsfalse.
+17)s.isnumeric():-Itreturnstrueifallthecharactersstringconsistsofdigits.
+Ex:-
+s="Welcometopythonprogramming"
+print(s.replace("o","*"))
+print(s.split(""))
+print(s.swapcase())
+print(s.isalpha())
+s="Hello123"
+print(s.isalnum())
+print(s.isalpha())
+print(s.isdigit())
+print(s.islower())
+print(s.isupper())
+s=""
+print(s.isspace())
+s="-"
+seq="Hello"
+print(s.join(seq))
+RegularExpressions
+ARegEx,orRegularExpression,isasequenceofcharactersthatformsasearchpattern.
+RegExcanbeusedtocheckifastringcontainsthespecifiedsearchpattern.
+Pythonhasabuilt-inpackagecalledre,whichcanbeusedtoworkwithRegular
+Expressions.
+Importtheremodule:
+Metacharacters
+Metacharactersarecharacterswithaspecialmeaning:
+[] -Squarebrackets
+Squarebracketsspecifiesasetofcharactersyouwishtomatch.
+Expression String Matched?
+[abc]
+a 1match
+ac 2matches
+HeyJude Nomatch
+abcdeca 5matches
+ [a-e]isthesameas[abcde].
+ [1-4]isthesameas[1234].
+ [0-39]isthesameas[01239]
+Youcancomplement(invert)thecharactersetbyusingcaret^symbolatthestartofasquare-bracket.
+ [^abc]meansanycharacterexceptaorborc.
+ [^0-9]meansanynon-digitcharacter.
+.–Period
+Aperiodmatchesanysinglecharacter(exceptnewline'\n').
+Expression String Matched?
+..
+a Nomatch
+ac 1match
+acd 1match
+acde 2matches(contains4characters)
+^-Caret
+Thecaretsymbol^isusedtocheckifastringstartswithacertaincharacter.
+Expression String Matched?
+^a
+a 1match
+abc 1match
+bac Nomatch
+^ab
+abc 1match
+acb Nomatch(startswithabutnotfollowedbyb)
+Thecaretsymbol^isusedtocheckifastringstartswithacertaincharacter.
+Expression String Matched?
+^a
+a 1match
+abc 1match
+bac Nomatch
+^ab
+abc 1match
+acb Nomatch(startswithabutnotfollowedbyb)
+$-Dollar
+Thedollarsymbol$isusedtocheckifastringendswithacertaincharacter.
+Expression String Matched?
+a$
+a 1match
+formula 1match
+cab Nomatch
+*-Star
+Thestarsymbol*matcheszeroormoreoccurrencesofthepatternlefttoit.
+Expression String Matched?
+ma*n
+mn 1match
+man 1match
+maaan 1match
+woman 1match
++-Plus
+Theplussymbol+matchesoneormoreoccurrencesofthepatternlefttoit.
+Expression String Matched?
+ma+n
+mn Nomatch(noacharacter)
+man 1match
+maaan 1match
+main Nomatch(aisnotfollowedbyn)
+woman 1match
+?-QuestionMark
+Thequestionmarksymbol?matcheszerooroneoccurrenceofthepatternlefttoit.
+Expression String Matched?
+ma?n mn 1match
+Expression String Matched?
+man 1match
+maaan Nomatch(morethanoneacharacter)
+main Nomatch(aisnotfollowedbyn)
+woman 1match
+{}-Braces
+Considerthiscode:{n,m}.Thismeansatleastn,andatmostm repetitionsofthepatternlefttoit.
+Expression String Matched?
+a{2,3}
+abcdat Nomatch
+abcdaat 1match(atdaat)
+aabcdaaat 2matches(ataabcanddaaat)
+aabcdaaaat 2matches(ataabcanddaaaat)
+Let'stryonemoreexample.ThisRegEx[0-9]{2,4}matchesatleast2digitsbutnotmorethan4digits
+Expression String Matched?
+[0-9]{2,4}
+ab123csde 1match(matchatab123csde)
+12and345673 2matches(at12and345673)
+1and2 Nomatch
+|-Alternation
+Verticalbar|isusedforalternation(oroperator).
+Expression String Matched?
+a|b
+cde Nomatch
+ade 1match(matchatade)
+acdbea 3matches(atacdbea)
+Here,a|bmatchanystringthatcontainseitheraorb
+()-Group
+Parentheses()isusedtogroupsub-patterns.Forexample,(a|b|c)xzmatchanystringthatmatches
+eitheraorborcfollowedbyxz
+Expression String Matched?
+(a|b|c)xz
+abxz Nomatch
+abxz 1match(matchatabxz)
+axzcabxz 2matches(ataxzbccabxz)
+Specialsequencesmakecommonlyusedpatternseasiertowrite.Here'salistofspecialsequences:
+\A-Matchesifthespecifiedcharactersareatthestartofastring.
+Expression String Matched?
+\Athe
+thesun Match
+Inthesun Nomatch
+\b-Matchesifthespecifiedcharactersareatthebeginningorendofaword.
+Expression String Matched?
+\bfoo
+football Match
+afootball Match
+afootball Nomatch
+foo\b
+thefoo Match
+theafootest Match
+theafootest Nomatch
+\B-Oppositeof\b.Matchesifthespecifiedcharactersarenotatthebeginningorendofaword.
+Expression String Matched?
+\Bfoo
+football Nomatch
+afootball Nomatch
+afootball Match
+foo\B
+thefoo Nomatch
+theafootest Nomatch
+theafootest Match
+\d-Matchesanydecimaldigit.Equivalentto[0-9]
+Expression String Matched?
+\d
+12abc3 3matches(at12abc3)
+Python Nomatch
+\D-Matchesanynon-decimaldigit.Equivalentto[^0-9]
+Expression String Matched?
+\D
+1ab34"50 3matches(at1ab34"50)
+1345 Nomatch
+\s-Matcheswhereastringcontainsanywhitespacecharacter.Equivalentto[\t\n\v].
+Expressio
+n
+String
+Matched
+?
+\s
+Python
+RegEx 1match
+PythonRegE
+x
+No
+match
+\S-Matcheswhereastringcontainsanynon-whitespacecharacter.Equivalentto[^\t\n\r\f\v].
+Expressio
+n
+Strin
+g
+Matched?
+\S
+ab
+2matches
+(atab)
+Nomatch
+\w-Matchesanyalphanumericcharacter(digitsandalphabets).Equivalentto[a-zA-Z0-
+9_].Bytheway,underscore_isalsoconsideredanalphanumericcharacter.
+Expressio
+n
+String Matched?
+\w
+12&":;c
+3matches(at12&":
+;c)
+%">! Nomatch
+\W -Matchesanynon-alphanumericcharacter.Equivalentto[^a-zA-Z0-9_]
+Expressio
+n
+Strin
+g
+Matched?
+\W
+1a2%c
+1match
+(at1a2%c)
+Python Nomatch
+re.findall()
+There.findall()methodreturnsalistofstringscontainingallmatches.
+Example1:re.findall()
+#Programtoextractnumbersfromastring
+importre
+string='hello12hi89.Howdy34'
+pattern='\d+'
+result=re.findall(pattern,string)
+print(result)
+#Output:['12','89','34']
+re.split()
+importre
+string='Twelve:12Eightynine:89.'
+pattern='\d+'
+result=re.split(pattern,string)
+print(result)
+#re.sub()
+#Programtoremoveallwhitespaces
+importre
+#multilinestring
+string='abc12de23\nf456'
+#matchesallwhitespacecharacters
+pattern='\s+'
+#emptystring
+replace=''
+new_string=re.sub(pattern,replace,string)
+print(new_string)
+DAY-4
+Functions
+ Afunctionisablockofcodewhichonlyrunswhenitiscalled.
+ Afunctionisasetofstatementsthattakeinputs,dosomespecificcomputation
+andproducesoutput.Theideaistoputsomecommonlyorrepeatedlydonetask
+togetherandmakeafunction,sothatinsteadofwritingthesamecodeagain
+andagainfordifferentinputs,wecancallthefunction.
+ Pythonprovidesbuilt-infunctionslikeprint(),etc.butwecanalsocreateyour
+ownfunctions.Thesefunctionsarecalleduser-definedfunctions.
+CreatingaFunction
+InPythonafunctionisdefinedusingthedefkeyword:
+defmy_function():
+print("Hellofromafunction")
+my_function()
+Output
+Hellofromafunction
+Parameters
+ Informationcanbepassedtofunctionsasparameter.
+ Parametersarespecifiedafterthefunctionname,insidetheparentheses.You
+canaddasmanyparametersasyouwant,justseparatethemwithacomma.
+defevenOdd(x):
+if(x%2==0):
+print"even"
+else:
+print"odd"
+#Drivercode
+evenOdd(2)
+evenOdd(3)
+defmy_function(fname):
+print(fname+"Atonomous")
+my_function("QIS")
+my_function("KLU")
+my_function("JNTU")
+DefaultParameterValue
+ Thefollowingexampleshowshowtouseadefaultparametervalue.
+ Ifwecallthefunctionwithoutparameter,itusesthedefaultvalue:
+defmy_function(country="Norway"):
+print("Iamfrom"+country)
+my_function("Sweden")
+my_function("India")
+my_function()
+my_function("Brazil")
+Output
+IamfromSweden
+IamfromIndia
+IamfromNorway
+IamfromBrazil
+PassbyReferenceorpassbyvalue?
+Oneimportantthingtonoteis,inPythoneveryvariablenameisareference.Whenwe
+passavariabletoafunction,anewreferencetotheobjectiscreated.Parameter
+passinginPythonissameasreferencepassinginJava.
+PassingaListasaParameter
+Youcansendanydatatypesofparametertoafunction(string,number,list,dictionary
+etc.),anditwillbetreatedasthesamedatatypeinsidethefunction.
+defmy_function(food):
+forxinfood:
+print(x)
+fruits=["apple","banana","cherry"]
+my_function(fruits)
+Output
+apple
+banana
+cherry
+#defmyFun(x):
+# x[0]=20
+##DriverCode(Notethatlstismodified
+##afterfunctioncall.
+#lst=[10,11,12,13,14,15]
+#myFun(lst);
+#print(lst)
+Output:
+[20,11,12,13,14,15]
+Whenwepassareferenceandchangethereceivedreferencetosomethingelse,the
+connectionbetweenpassedandreceivedparameterisbroken.Forexample,consider
+belowprogram.
+defmyFun(x):
+#Afterbelowlinelinkofxwithprevious
+#objectgetsbroken.Anewobjectisassigned
+#tox.
+x=[20,30,40]
+#DriverCode(Notethatlstisnotmodified
+#afterfunctioncall.
+lst=[10,11,12,13,14,15]
+myFun(lst);
+print(lst)
+Anotherexampletodemonstratethatreferencelinkisbrokenifweassignanewvalue
+(insidethefunction).
+defmyFun(x):
+#Afterbelowlinelinkofxwithprevious
+#objectgetsbroken.Anewobjectisassigned
+#tox.
+x=20
+#DriverCode(Notethatlstisnotmodified
+#afterfunctioncall.
+x=10
+myFun(x);
+print(x)
+Output:
+10
+ReturnValues
+Toletafunctionreturnavalue,usethereturnstatement:
+defmy_function(x):
+return5*x
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+15
+25
+45
+Recursion
+ Pythonalsoacceptsfunctionrecursion,whichmeansadefinedfunctioncancall
+itself.
+ Recursionisacommonmathematicalandprogrammingconcept.Itmeansthata
+functioncallsitself.Thishasthebenefitofmeaningthatyoucanloopthrough
+datatoreacharesult.
+deftri_recursion(k):
+if(k>0):
+result=k+tri_recursion(k-1)
+print(result)
+else:
+result=0
+returnresult
+print("\n\nRecursionExampleResults")
+tri_recursion(6)
+RecursionExampleResults
+1
+3
+6
+10
+15
+21
+LambdaFunction
+Anonymousfunctions:InPython,anonymousfunctionmeansthatafunctioniswithout
+aname.Aswealreadyknowthatdefkeywordisusedtodefinethenormalfunctions
+andthelambdakeywordisusedtocreateanonymousfunctions.
+Alambdafunctioncantakeanynumberofarguments,butcanonlyhaveone
+expression.
+x=lambdaa:a+10
+print(x(5))
+15
+#Pythoncodetoillustratecubeofanumber
+#usinglabmdafunction
+cube=lambdax:x*x*x
+print(cube(7))
+DAY-5
+Python Modules
+ Consideramoduletobethesameasacodelibrary.
+ Afilecontainingasetoffunctionsyouwanttoincludeinyourapplication.
+CreateaModule
+ Tocreateamodulejustsavethecodeyouwantinafilewiththefile
+extension.py:
+NamingaModule
+ Youcannamethemodulefilewhateveryoulike,butitmusthavethefile
+extension.py
+Example
+Savethiscodeinafilenamedmymodule.py
+1)
+defgreeting(name):
+print("Hello,"+name)
+UseaModule
+Nowwecanusethemodulewejustcreated,byusingtheimportstatement:
+importmymodule
+mymodule.greeting("EBOX")
+VariablesinModule
+Themodulecancontainfunctions,asalreadydescribed,butalsovariablesofalltypes
+(dictionaries,objectsetc):
+2)Example
+Savethiscodeinthefilemymodule.py
+person1={
+"name":"John",
+"age":36,
+"country":"Norway"
+}
+Example
+Importthemodulenamedmymodule,andaccesstheperson1dictionary:
+importmymodule
+a=mymodule.person1["age"]
+print(a)
+Output
+36
+3)
+Main.py
+importmymodule
+a=10
+b=5
+print(mymodule.add(a,b))
+or
+Re-namingaModule
+Youcancreateanaliaswhenyouimportamodule,byusingtheaskeyword:
+importmymoduleasmy
+a=10
+b=5
+print(my.add(a,b))
+or
+Youcanchoosetoimportonlypartsfromamodule,byusingthefromkeyword.
+frommymoduleimportadd
+a=10
+b=5
+print(add(a,b))
+mymodule.py
+defadd(x,y):
+z=x+y
+return(z)
+defsub(x,y):
+z=x-y
+return(z)
+defmul(x,y):
+z=x*y
+return(z)
+Built-inModules
+Thereareseveralbuilt-inmodulesinPython,whichyoucanimportwheneveryoulike.
+importplatform
+x=platform.system()
+print(x)
+PythonPackages
+ApackageisbasicallyadirectorywithPythonfilesandafilewiththename__init__.py.
+ThismeansthateverydirectoryinsideofthePythonpath,whichcontainsafilenamed
+__init__.py,willbetreatedasapackagebyPython.It'spossibletoputseveralmodules
+intoaPackage.
+Firstofall,weneedadirectory.Thenameofthisdirectorywillbethenameofthe
+package,whichwewanttocreate.Wewillcallourpackage"simple_package".This
+directoryneedstocontainafilewiththename"__init__.py".Thisfilecanbeempty,orit
+cancontainvalidPythoncode.
+NowwecanputintothisdirectoryallthePythonfileswhichwillbethesubmodulesof
+ourmodule.
+Wecreatetwosimplefilesa.pyandb.pyjustforthesakeoffillingthepackagewith
+modules.
+Thecontentofa.py:
+defadd(x,y):
+z=x+y
+returnz
+Thecontentofb.py:
+defsub(p,q):
+r=p-q
+returnr
+Contentofmain.py
+fromsimple_packageimporta,b
+m=10
+n=20
+print(a.add(m,n))
+print(b.sub(m,n))
+FileHandling
+ThekeyfunctionforworkingwithfilesinPythonistheopen()function.
+Theopen()functiontakestwoparameters;filename,andmode.
+Therearefourdifferentmethods(modes)foropeningafile:
+"r"-Read-Defaultvalue.Opensafileforreading,errorifthefiledoesnotexist
+"a"-Append-Opensafileforappending,createsthefileifitdoesnotexist
+"w"-Write-Opensafileforwriting,createsthefileifitdoesnotexist
+"x"-Create-Createsthespecifiedfile,returnsanerrorifthefileexists
+"t"-Text-Defaultvalue.Textmode
+"b"-Binary-Binarymode
+Toopenafileforreadingitisenoughtospecifythenameofthefile:
+f=open("demofile.txt")
+Thecodeaboveisthesameas:
+f=open("demofile.txt","rt")
+Assumewehavethefollowingfile,locatedinthesamefolder
+Input.txt
+Cwasinventedtowriteanoperatingsystem
+calledUNIX.
+Toopenthefile,usethebuilt-inopen()function.
+Theopen()functionreturnsafileobject,whichhasaread()methodforreadingthe
+contentofthefile:
+f=open("Input.txt","r")
+print(f.read())
+Output:
+Cwasinventedtowriteanoperatingsystem
+calledUNIX.
+ReadOnlyPartsoftheFile
+Bydefaulttheread()methodreturnsthewholetext,butyoucanalsospecifyhowmany
+charactersyouwanttoreturn:
+f=open("input.txt","r")
+print(f.read(25))
+ReadLines
+Youcanreturnonelinebyusingthereadline()method:
+Example
+Readonelineofthefile:
+f=open("input.txt","r")
+print(f.readline())
+ C was invented to write an operating system 
+Bycallingreadline()twotimes,youcanreadthetwofirstlines:
+f=open("input.txt","r")
+print(f.readline())
+print(f.readline())
+Byloopingthroughthelinesofthefile,youcanreadthewholefile,linebyline:
+f=open("input.txt","r")
+forxinf:
+print(x)
+CloseFiles
+Itisagoodpracticetoalwaysclosethefilewhenyouaredonewithit.
+Example
+Closethefilewhenyouarefinishwithit:
+f=open("input.txt","r")
+forxinf:
+print(x)
+f.close()
+WritetoanExistingFile
+Towritetoanexistingfile,youmustaddaparametertotheopen()function:
+"a"-Append-willappendtotheendofthefile
+"w"-Write-willoverwriteanyexistingcontent
+appendcontenttothefile:
+f=open("input.txt","a")
+f.write("AndinventedbyDinnisRitchie.")
+f.close()
+f=open("input.txt","r")
+print(f.read())
+f.close()
+Overwritethecontent:
+f=open("input.txt","w")
+f.write("AndinventedbyDinnisRitchie.")
+f.close()
+f=open("input.txt","r")
+print(f.read())
+f.close()
+seek()function
+Themethodseek()setsthefile'scurrentpositionattheoffset.Thewhenceargumentis
+optionalanddefaultsto0,whichmeansabsolutefilepositioning,othervaluesare1
+whichmeansseekrelativetothecurrentpositionand2meansseekrelativetothefile's
+end.
+Syntax
+Followingisthesyntaxforseek()method−
+fileObject.seek(offset[,whence])
+ offset−Thisisthepositionoftheread/writepointerwithinthefile.
+ whence− This is optionaland defaults to 0 which means absolute file
+positioning,othervaluesare1whichmeansseekrelativetothecurrentposition
+and2meansseekrelativetothefile'send.
+fo=open("data.txt","r")
+print("NameoftheFile:",fo.name)
+str=fo.read(10)
+print("ReadStringistill10 :",str)
+pos=fo.tell()
+print("CurrentPosition :",pos)
+str=fo.read(10)
+print("ReadStringistillnext10:",str)
+pos=fo.tell()
+print("CurrentPosition :",pos)
+print()
+print("SendingPointerbacktoTop")
+pos=fo.seek(0,0)
+print("CurrentPosition :",pos)
+str=fo.read(25)
+print("ReadStringistill25 :",str)
+pos=fo.tell()
+print("CurrentPosition :",pos)
+fo.close()
+PythonDateandTime
+AdateinPythonisnotadatatypeofitsown,butwecanimportamodule
+nameddatetimetoworkwithdatesasdateobjects.
+importdatetime
+x=datetime.datetime.now()
+print(x)
+Whenweexecutethecodefromtheexampleabovetheresultwillbe:
+2019-06-1323:20:48.653788
+Thedatecontainsyear,month,day,hour,minute,second,andmicrosecond.
+Thedatetimemodulehasmanymethodstoreturninformationaboutthedateobject.
+importdatetime
+x=datetime.datetime.now()
+print(x.year)
+print(x.strftime("%A"))
+2019
+Thursday
+CreatingDateObjects
+Tocreateadate,wecanusethedatetime()class(constructor)ofthedatetimemodule.
+Thedatetime()classrequiresthreeparameterstocreateadate:year,month,day.
+importdatetime
+x=datetime.datetime(2020,5,17,23,51,00)
+print(x)
+2020-05-1723:51:00
+Thestrftime()Method
+Thedatetimeobjecthasamethodforformattingdateobjectsintoreadablestrings.
+Themethodiscalledstrftime(),andtakesoneparameter,format,tospecifytheformat
+ofthereturnedstring:
+importdatetime
+x=datetime.datetime(2018,6,1)
+print(x.strftime("%B"))
+Directive Description Example
+%a Weekday,shortversion Wed
+%A Weekday,fullversion Wednesday
+%w Weekdayasanumber0-6,0isSunday 3
+%d Dayofmonth01-31 31
+%b Monthname,shortversion Dec
+%B Monthname,fullversion December
+%m Monthasanumber01-12 12
+%y Year,shortversion,withoutcentury 18
+%Y Year,fullversion 2018
+%I Hour00-12 05
+%p AM/PM PM
+DAY-6
+PythonClasses/Objects
+ Pythonisanobjectorientedprogramminglanguage.
+ AlmosteverythinginPythonisanobject,withitspropertiesandmethods.
+ AClassislikeanobjectconstructor,ora"blueprint"forcreatingobjects.
+Majorprinciplesofobject-orientedprogrammingsystemaregivenbelow.
+o Object
+o Class
+o Method
+o Inheritance
+o Polymorphism
+o DataAbstraction
+o Encapsulation
+Object:
+Theobjectisanentitythathasstateandbehavior.Itmaybeanyreal-worldobjectlike
+themouse,keyboard,chair,table,pen,etc.EverythinginPythonisanobject,andalmost
+everythinghasattributesandmethods.
+Class:
+Theclasscanbedefinedasacollectionofobjects.Itisalogicalentitythathassome
+specificattributesandmethods.
+Encapsulation
+o Encapsulationisalsoanimportantaspectofobject-orientedprogramming.Itis
+usedtorestrictaccesstomethodsandvariables.Inencapsulation,codeand
+dataarewrappedtogetherwithinasingleunitfrombeingmodifiedbyaccident.
+DataAbstraction
+o Dataabstractionandencapsulationbothareoftenusedassynonyms.Bothare
+nearlysynonymbecausedataabstractionisachievedthroughencapsulation.
+o Abstractionisusedtohideinternaldetailsandshowonlyfunctionalities.
+Abstractingsomethingmeanstogivenamestothingssothatthenamecaptures
+thecoreofwhatafunctionorawholeprogramdoes.
+CreateaClass
+ Tocreateaclass,usethekeywordclass:
+classPerson: #Class
+college="Amphisoft" #ClassVariable
+def__init__(self,name,age): #Constructor
+self.name=name #InstanceVariable
+self.age=age #InstanceVariable
+defdisplay(self): #Method
+print(self.name+"ageis"+self.age+"andheisworkingfor"+self.college)
+name=input()
+age=input()
+p=Person(name,age) #Creationofobjectreference
+p.display()
+Constructor
+InPython,theconstructormethodisinvokedautomaticallywheneveranewobjectofa
+classisinstantiated,sameasconstructorsinC#orJava.Theconstructormusthavea
+specialname__init__()andaspecialparametercalledself.
+Thefirstparameterofeachmethodinaclassmustbetheself whichreferstothe
+callingobject.However,youcangiveanynametothefirstparameter,notnecessary
+'self'.
+Usethe__init__()functiontoassignvaluestoobjectproperties,orotheroperationsthat
+arenecessarytodowhentheobjectisbeingcreated:
+classPerson:
+def__init__(self,name,age):
+self.name=name
+self.age=age
+p1=Person("John",36)
+print(p1.name)
+print(p1.age)
+InstanceAttributes
+Instanceattributesareattributesorpropertiesattachedtoaninstanceofaclass.
+Instanceattributesaredefinedintheconstructor.
+Thefollowingexampledefinesinstanceattributesnameandageintheconstructor.
+ClassAttributes
+ Classattributesaredifferentfrom instanceattributes.Anattributewhosevalue
+isthesameforallinstancesofaclassiscalledaclassattribute.Thevalueof
+classattributeissharedbyallobjects.
+ Classattributesaredefinedatclasslevelratherthaninsidetheconstructor
+method__init__().Unlikeinstanceattributes,classattributesareaccessedusing
+thenameoftheclass.
+ Thisattributecanbeaccessedusingtheclassname
+ Eachobjectofthepersonclasscanhavethisclassattributeaccessedusing
+object.
+classPerson:
+college="Amphisoft"
+def__init__(self,name,age):
+self.name=name
+self.age=age
+defdisplay(self):
+print(self.name+"ageis"+self.age+"andheisworkingfor"+self.college)
+p1=Person("Nickil","20")
+p2=Person("Ravi","28")
+p1.display()
+p2.display()
+print(Person.college)
+print(p1.college)
+print(p2.college)
+ClassMethods
+Youcandefineasmanymethodsasyouwantinaclassusingthedefkeyword.Each
+methodmusthavethefirstparameter,generallynamedasselfwhichreferstothe
+callinginstance.
+Theaboveexampleincludesthedisplaymethodinapersonclass.
+TheselfParameter
+Theselfparameterisareferencetothecurrentinstanceoftheclass,andisusedto
+accessvariablesthatbelongstotheclass.
+Itdoesnothavetobenamedself,youcancallitwhateveryoulike,butithastobethe
+firstparameterofanyfunctionintheclass:
+classPerson:
+def__init__(mysillyobject,name,age):
+mysillyobject.name=name
+mysillyobject.age=age
+defmyfunc(abc):
+print("Hellomynameis"+abc.name)
+p1=Person("John",36)
+p1.myfunc()
+TheRelationshipsamongtheclasses
+Whatisassociation?
+Associationisthecombinationofcompositionandaggregation
+Association:
+ Itisthebasicrelationshipbetweentwoclasses
+ Itissimilartoinheritancewhichallowprogrammertoreusethecode
+Inheritancev/sAssociation
+Inheritanceusesisarelationshipandextendsproperties.
+Ex:-Studentisahuman,oneplusisasmartphone.
+Associationuseshas-a(composition)anduses-a(Aggregation)relationship
+Has-a(composition)
+Hereoneclassactascontainerandanotherclassascontent.
+Ex:carhascarparts
+EmployeehasSalary
+classSalary:
+def__init__(self,pay):
+self.pay=pay
+defget_total(self):
+return(self.pay*12)
+classEmployee:
+def__init__(self,pay,bonus):
+self.pay=pay
+self.bonus=bonus
+self.obj_salary=Salary(self.pay)
+defannual_salary(self):
+return"total:"+str(self.obj_salary.get_total()+self.bonus)
+obj_emp=Employee(100,10)
+print(obj_emp.annual_salary())
+Uses-a(Aggregation)
+ Itisaweakformofcomposition
+ Ifcontainerobjectisdeletedthenallofitscontentobjectsarestillexist.
+ Aggregationhasuses-arelationship
+ Playersuses-ateam.Ifteamgoingtodissolvethenteammembersgoingtoexist.
+classSalary:
+def__init__(self,pay):
+self.pay=pay
+defget_total(self):
+return(self.pay*12)
+classEmployee:
+def__init__(self,pay,bonus):
+self.pay=pay
+self.bonus=bonus
+self.obj_salary=Salary(self.pay)
+defannual_salary(self):
+return"total:"+str(self.obj_salary.get_total()+self.bonus)
+obj_salary=Salary(100)
+print(obj_salary.get_total())
+obj_emp=Employee(100,10)
+print(obj_emp.annual_salary())
+ModifyObjectProperties
+Youcanmodifypropertiesonobjectslikethis:
+classPerson:
+def__init__(self,name,age):
+self.name=name
+self.age=age
+defmyfunc(self):
+print("Hellomynameis"+self.name)
+p1=Person("John",36)
+p1.myfunc()
+p1.age=40
+print(p1.age)
+DeleteObjectProperties
+Youcandeletepropertiesonobjectsbyusingthedelkeyword:
+classPerson:
+def__init__(self,name,age):
+self.name=name
+self.age=age
+defmyfunc(self):
+print("Hellomynameis"+self.name)
+p1=Person("John",36)
+delp1.age
+print(p1.age)
+line13,in<module>
+print(p1.age)
+AttributeError:'Person'objecthasnoattribute'age'
+DeleteObjects
+Youcandeleteobjectsbyusingthedelkeyword:
+classPerson:
+def__init__(self,name,age):
+self.name=name
+self.age=age
+defmyfunc(self):
+print("Hellomynameis"+self.name)
+p1=Person("John",36)
+delp1
+print(p1)
+line13,in<module>
+print(p1)
+NameError:'p1'isnotdefined
+PythonInheritance
+Inheritanceallowsustodefineaclassthatinheritsallthemethodsandpropertiesfrom
+anotherclass.
+Parentclassistheclassbeinginheritedfrom,alsocalledbaseclass.
+Childclassistheclassthatinheritsfromanotherclass,alsocalledderivedclass.
+CreateaParentClass
+Anyclasscanbeaparentclass,sothesyntaxisthesameascreatinganyotherclass:
+CreateaclassnamedPerson,withfirstnameandlastnameproperties,and
+aprintnamemethod:
+classPerson:
+def__init__(self,fname,lname):
+self.firstname=fname
+self.lastname=lname
+defprintname(self):
+print(self.firstname,self.lastname)
+#UsethePersonclasstocreateanobject,andthenexecutetheprintnamemethod:
+x=Person("John","Doe")
+x.printname()
+SingleInheritance:
+1)
+classRobot:
+def__init__(self,name):
+self.name=name
+defsay_hi(self):
+print("Hi,Iam"+self.name)
+classPhysicianRobot(Robot):
+pass
+x=Robot("Marvin")
+y=PhysicianRobot("James")
+x.say_hi()
+y.say_hi()
+2)
+classfruit:
+def__init__(self):
+print("I'mafruit")
+classcitrus(fruit):
+def__init__(self):
+super().__init__()
+print("I'mcitrus")
+lime=citrus()
+MultipleInheritance:
+Aclasscaninheritfrommultiplesuperclasses.Multipleinheritanceisanextensionof
+standardorsingleinheritance.Theprincipleremainsthesame:aclassinheritsfrom
+anotherclass.
+classA:
+def__init__(self):
+self.name='John'
+self.age=23
+defgetName(self):
+returnself.name
+classB:
+def__init__(self):
+self.name='Richard'
+self.id='32'
+defgetName(self):
+returnself.name
+classC(A,B):
+def__init__(self):
+A.__init__(self)
+B.__init__(self)
+defgetName(self):
+returnself.name
+C1=C()
+print(C1.getName())
+MultilevelInheritance:
+classWebsite:
+deffirst(self):
+print('freetimelearning.com')
+classSecond(Website):
+defsec(self):
+print('www.freetimelearning.com')
+classThird(Second):
+deffinal(self):
+print('www.freetimelearn.com')
+a=Third()
+a.first()
+a.sec()
+a.final()
+HierarchicalInheritance
+classWebsite:
+deffirst(self):
+print('freetimelearning.com')
+classSecond(Website):
+defsec(self):
+print('www.freetimelearning.com')
+classThird(Website):
+deffinal(self):
+print('www.freetimelearn.com')
+a=Third()
+b=Second()
+a.first()
+b.first()
+Polymorphism
+Polymorphismcontainstwowords"poly"and"morphs".PolymeansmanyandMorphs
+meansform,shape.Bypolymorphism,weunderstandthatonetaskcanbeperformedin
+differentways.
+1)Methodoverloading
+Givenasinglemethodorfunction,wecanspecifythenumberofparametersourself.
+Dependingonthefunctiondefinition,itcanbecalledwithzero,one,twoormoreparam
+eters.
+Thisisknownasmethodoverloading.
+classHuman:
+defsayHello(self,name=None):
+ifnameisnotNone:
+print('Hello'+name)
+else:
+print('Hello')
+#Createinstance
+obj=Human()
+obj.sayHello()
+obj.sayHello('Guido')
+2)OverrideMethod(Methodoverriding)
+Methodoverridingisaconceptofobjectorientedprogrammingthatallowsusto
+changetheimplementationofafunctioninthechildclassthatisdefinedintheparent
+class.Itistheabilityofachildclasstochangetheimplementationofanymethodwhich
+isalreadyprovidedbyoneofitsparentclass(ancestors).
+classA:
+defsayhi(self):
+print("I'minA")
+classB(A):
+defsayhi(self):
+print("I'minB")
+bobj=B()
+bobj.sayhi()
+Example:PublicAttributes
+classEmployee:
+def__init__(self,name,sal):
+self.name=name
+self.salary=sal
+e1=Employee("Kiran",10000)
+print(e1.salary)
+Example:PrivateAttributes
+classemployee:
+def__init__(self,name,sal):
+self.__name=name#privateattribute
+self.__salary=sal#privateattribute
+e1=employee("Bill",10000)
+print(e1.__salary)
+AbstractClassesinPython
+Anabstractclasscanbeconsideredasablueprintforotherclasses,allowsyouto
+createasetofmethodsthatmustbecreatedwithinanychildclassesbuiltfrom your
+abstractclass.Aclasswhichcontainsoneorabstractmethodsiscalledanabstract
+class.An abstractmethod is a method thathas declaration butnothas any
+implementation.Abstractclassesarenotabletoinstantiatedanditneedssubclasses
+toprovideimplementationsforthoseabstractmethodswhicharedefinedinabstract
+classes.
+fromabcimportABC,abstractmethod
+classAnimal(ABC):
+@abstractmethod
+defmove(self):
+pass
+classHuman(Animal):
+defmove(self):
+print("Icanwalkandrun...")
+classSnack(Animal):
+defmove(self):
+print("Icancrawl...")
+h=Human()
+s=Snack()
+h.move()
+s.move()
+#1-1-person-ID
+#1-N-Book-Pages
+#N-N-dept-fac
+1-1
+classPerson:
+def__init__(self,name,age,ID=None):
+self.name=name
+self.age=age
+self.ID=ID
+def__str__(self):
+returnself.name+"-"+str(self.age)+"-"+str(self.ID)
+classID:
+def__init__(self,rollNo,barCode):
+self.rollNo=rollNo
+self.barCode=barCode
+def__str__(self):
+returnstr(self.rollNo)+"-"+str(self.barCode)
+id=ID(123,True)
+p1=Person("karthik",27)
+p1.ID=id
+print(p1)
+1-N
+classBook:
+def__init__(self,name,author,price,pagelist=None):
+self.name=name
+self.author=author
+self.price=price
+self.pagelist=pagelist
+def__str__(self):
+s=self.name+"-"+self.author+"-"+str(self.price)
+foriinpagelist:
+s+=str(i)
+returns
+classPage:
+def__init__(self,pageNo,content):
+self.pageNo=pageNo
+self.content=content
+def__str__(self):
+return"\n"+str(self.pageNo)+"-"+self.content
+pagelist=[]
+pagelist.append(Page(1,"Hello"))
+pagelist.append(Page(2,"hey"))
+pagelist.append(Page(3,"welcome"))
+pagelist.append(Page(4,"python"))
+pagelist.append(Page(5,"India"))
+book=Book("Python","Gusso",1500,pagelist)
+print(book)
+N-N
+classDept:
+def__init__(self,name,noofSections):
+self.name=name
+self.noofSections=noofSections
+def__str__(self):
+returnself.name+"-"+str(self.noofSections)
+classFac:
+def__init__(self,name,age,desig):
+self.name=name
+self.age=age
+self.desig=desig
+def__str__(self):
+returnself.name+"-"+str(self.age)+"-"+self.desig
+classDeptFac:
+def__init__(self,dept,fac):
+self.dept=dept
+self.fac=fac
+def__str__(self):
+returnstr(self.dept)+":"+str(self.fac)
+d1=Dept("CSE",5)
+d2=Dept("EIE",1)
+d3=Dept("EEE",2)
+f1=Fac("fac1",45,"AP")
+f2=Fac("fac2",55,"P")
+f3=Fac("fac3",40,"AP")
+dflist=[]
+dflist.append(DeptFac(d1,f1))
+dflist.append(DeptFac(d1,f3))
+dflist.append(DeptFac(d2,f2))
+dflist.append(DeptFac(d2,f3))
+dflist.append(DeptFac(d3,f1))
+dflist.append(DeptFac(d3,f2))
+foriindflist:
+print(str(i))
+DAY-8
+ExceptionHandling
+Python TryExcept
+Thetryblockletsyoutestablockofcodeforerrors.
+Theexceptblockletsyouhandletheerror.
+Thefinallyblockletsyouexecutecode,regardlessoftheresultofthetry-andexcept
+blocks.
+Whenanerroroccurs,orexceptionaswecallit,Pythonwillnormallystopandgenerate
+anerrormessage.
+Theseexceptionscanbehandledusingthetrystatement:
+try:
+print(x)
+except:
+print("Anexceptionoccurred")
+Sincethetryblockraisesanerror,theexceptblockwillbeexecuted.
+Withoutthetryblock,theprogramwillcrashandraiseanerror:
+ManyExceptions
+Youcandefineasmanyexceptionblocksasyouwant,e.g.ifyouwanttoexecutea
+specialblockofcodeforaspecialkindoferror:
+1)
+try:
+print(x)
+exceptNameError:
+print("Variablexisnotdefined")
+except:
+print("Somethingelsewentwrong")
+2)
+try:
+print(x)
+a=10/0
+exceptNameError:
+print("Variablexisnotdefined")
+exceptZeroDivisionError:
+print("Divisionbyzeroisnotpossible")
+except:
+print("Somethingelsewentwrong")
+3)
+a=[1,2,3]
+try:
+print("Secondelement=%d"%(a[1]))
+Throwserrorsincethereareonly3elementsinarray
+print("Fourthelement=%d"%(a[3]))
+exceptIndexError:
+print("Anerroroccurred")
+Else
+Youcanusetheelsekeywordtodefineablockofcodetobeexecutedifnoerrorswere
+raised:
+try:
+print("Hello")
+except:
+print("Somethingwentwrong")
+else:
+print("Nothingwentwrong")
+Finally
+Thefinallyblock,ifspecified,willbeexecutedregardlessifthetryblockraisesanerror
+ornot.
+try:
+print(x)
+except:
+print("Somethingwentwrong")
+finally:
+print("The'tryexcept'isfinished")
+Thiscanbeusefultocloseobjectsandcleanupresources:
+Example
+Trytoopenandwritetoafilethatisnotwritable:
+try:
+f=open("demofile.txt","r")
+f.write("LorumIpsum")
+except:
+print("Somethingwentwrongwhenwritingtothefile")
+finally:
+f.close()
+RaisingException:
+Theraisestatementallowstheprogrammertoforceaspecificexceptiontooccur.The
+soleargumentinraiseindicatestheexceptiontoberaised.Thismustbeeitheran
+exceptioninstanceoranexceptionclass(aclassthatderivesfromException).
+1)
+try:
+raiseNameError("Hithere")#RaiseError
+exceptNameError:
+print("Anexception")
+raise#Todeterminewhethertheexceptionwasraisedornot
+2)
+try:
+a=int(input("Entera?"))
+b=int(input("Enterb?"))
+ifbis0:
+raiseArithmeticError;
+else:
+print("a/b=",a/b)
+exceptArithmeticError:
+print("Thevalueofbcan'tbe0")
+LambdaFunction
+Anonymousfunctions:InPython,anonymousfunctionmeansthatafunctioniswithout
+aname.Aswealreadyknowthatdefkeywordisusedtodefinethenormalfunctions
+andthelambdakeywordisusedtocreateanonymousfunctions.
+Alambdafunctioncantakeanynumberofarguments,butcanonlyhaveone
+expression.
+x=lambdaa:a+10
+print(x(5))
+15
+#Pythoncodetoillustratecubeofanumber
+#usinglabmdafunction
+cube=lambdax:x*x*x
+print(cube(7))
+DataStructures
+LinkedLists
+ Alinkedlistisasequenceofdataelements,whichareconnectedtogethervia
+links.Eachdataelementcontainsaconnectiontoanotherdataelementinform
+ofapointer.
+ Inthistypeofdatastructurethereisonlyonelinkbetweenanytwodata
+elements.Wecreatesuchalistandcreateadditionalmethodstoinsert,update
+andremoveelementsfromthelist.
+CreationofLinkedlist
+classNode:
+def__init__(self,dataval=None):
+self.dataval=dataval
+self.nextval=None
+classSLinkedList:
+def__init__(self):
+self.headval=None
+list1=SLinkedList()
+list1.headval=Node("Mon")
+e2=Node("Tue")
+e3=Node("Wed")
+#LinkfirstNodetosecondnode
+list1.headval.nextval=e2
+#LinksecondNodetothirdnode
+e2.nextval=e3
+TraversingaLinkedList
+Singlylinkedlistscanbetraversedinonlyforwarddirectionstartingformthefirstdata
+element.Wesimplyprintthevalueofthenextdataelementbyassigningthepointerof
+thenextnodetothecurrentdataelement.
+classNode:
+def__init__(self,dataval=None):
+self.dataval=dataval
+self.nextval=None
+classSLinkedList:
+def__init__(self):
+self.headval=None
+deflistprint(self):
+printval=self.headval
+whileprintvalisnotNone:
+print(printval.dataval)
+printval=printval.nextval
+list=SLinkedList()
+list.headval=Node("Mon")
+e2=Node("Tue")
+e3=Node("Wed")
+#LinkfirstNodetosecondnode
+list.headval.nextval=e2
+#LinksecondNodetothirdnode
+e2.nextval=e3
+list.listprint()
+InsertingattheEndoftheLinkedList
+Thisinvolvespointingthenextpointerofthecurrentlastnodeofthelinkedlisttothe
+newdatanode.Sothecurrentlastnodeofthelinkedlistbecomesthesecondlastdata
+nodeandthenewnodebecomesthelastnodeofthelinkedlist.
+classNode:
+def__init__(self,dataval=None):
+self.dataval=dataval
+self.nextval=None
+classSLinkedList:
+def__init__(self):
+self.headval=None
+#Functiontoaddnewnode
+defAtEnd(self,newdata):
+NewNode=Node(newdata)
+ifself.headvalisNone:
+self.headval=NewNode
+return
+laste=self.headval
+while(laste.nextval):
+laste=laste.nextval
+laste.nextval=NewNode
+#Printthelinkedlist
+deflistprint(self):
+printval=self.headval
+whileprintvalisnotNone:
+print(printval.dataval)
+printval=printval.nextval
+list=SLinkedList()
+list.headval=Node("Mon")
+e2=Node("Tue")
+e3=Node("Wed")
+list.headval.nextval=e2
+e2.nextval=e3
+list.AtEnd("Thu")
+list.listprint()
+InsertingattheBeginningoftheLinkedList
+Thisinvolvespointingthenextpointerofthenewdatanodetothecurrentheadofthe
+linkedlist.Sothecurrentheadofthelinkedlistbecomestheseconddataelementand
+thenewnodebecomestheheadofthelinkedlist.
+classNode:
+def__init__(self,dataval=None):
+self.dataval=dataval
+self.nextval=None
+classSLinkedList:
+def__init__(self):
+self.headval=None
+#Printthelinkedlist
+deflistprint(self):
+printval=self.headval
+whileprintvalisnotNone:
+print(printval.dataval)
+printval=printval.nextval
+defAtBegining(self,newdata):
+NewNode=Node(newdata)
+#Updatethenewnodesnextvaltoexistingnode
+NewNode.nextval=self.headval
+self.headval=NewNode
+list=SLinkedList()
+list.headval=Node("Mon")
+e2=Node("Tue")
+e3=Node("Wed")
+list.headval.nextval=e2
+e2.nextval=e3
+list.AtBegining("Sun")
+list.listprint()
+InsertinginbetweentwoDataNodes
+Thisinvolveschangingthepointerofaspecificnodetopointtothenewnode.Thatis
+possiblebypassinginboththenewnodeandtheexistingnodeafterwhichthenew
+nodewillbeinserted.Sowedefineanadditionalclasswhichwillchangethenext
+pointerofthenewnodetothenextpointerofmiddlenode.Thenassignthenewnode
+tonextpointerofthemiddlenode.
+classNode:
+def__init__(self,dataval=None):
+self.dataval=dataval
+self.nextval=None
+classSLinkedList:
+def__init__(self):
+self.headval=None
+#Functiontoaddnode
+defInbetween(self,middle_node,newdata):
+ifmiddle_nodeisNone:
+print("Thementionednodeisabsent")
+return
+NewNode=Node(newdata)
+NewNode.nextval=middle_node.nextval
+middle_node.nextval=NewNode
+#Printthelinkedlist
+deflistprint(self):
+printval=self.headval
+whileprintvalisnotNone:
+print(printval.dataval)
+printval=printval.nextval
+list=SLinkedList()
+list.headval=Node("Mon")
+e2=Node("Tue")
+e3=Node("Thu")
+list.headval.nextval=e2
+e2.nextval=e3
+list.Inbetween(list.headval.nextval,"Fri")
+list.listprint()
+RemovinganItemformaLikedList
+Wecanremoveanexistingnodeusingthekeyforthatnode.Inthebelowprogram we
+locatethepreviousnodeofthenodewhichistobedeleted.Thenpointthenextpointer
+ofthisnodetothenextnodeofthenodetobedeleted.
+classNode:
+def__init__(self,data=None):
+self.data=data
+self.next=None
+classSLinkedList:
+def__init__(self):
+self.head=None
+defAtbegining(self,data_in):
+NewNode=Node(data_in)
+NewNode.next=self.head
+self.head=NewNode
+#Functiontoremovenode
+defRemoveNode(self,Removekey):
+HeadVal=self.head
+if(HeadValisnotNone):
+if(HeadVal.data==Removekey):
+self.head=HeadVal.next
+HeadVal=None
+return
+while(HeadValisnotNone):
+ifHeadVal.data==Removekey:
+break
+prev=HeadVal
+HeadVal=HeadVal.next
+if(HeadVal==None):
+return
+prev.next=HeadVal.next
+HeadVal=None
+defLListprint(self):
+printval=self.head
+while(printval):
+print(printval.data),
+printval=printval.next
+llist=SLinkedList()
+llist.Atbegining("Mon")
+llist.Atbegining("Tue")
+llist.Atbegining("Wed")
+llist.Atbegining("Thu")
+llist.RemoveNode("Tue")
+llist.LListprint()
